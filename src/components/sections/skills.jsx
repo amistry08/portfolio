@@ -1,4 +1,4 @@
-import { assets, serviceData } from "@/assets/assets"
+import { assets } from "@/assets/assets"
 import Image from "next/image"
 import React from "react"
 import { motion } from "motion/react"
@@ -26,14 +26,6 @@ const Skills = () => {
     "Cloud & DevOps": ["AWS", "Docker", "GitHub Actions", "Kubernetes"],
     Testing: ["Unit Testing", "Debugging", "QA"],
     Workflow: ["Agile / Scrum", "Git & GitHub", "Jira", "Trello"],
-    Projects: [
-      "Music Recommendation System",
-      "Web Search Engine",
-      "Fall Detection Belt",
-      "Diabetes Tracking App",
-      "NeetCode 150",
-      "2D RPG Portfolio Game",
-    ],
     Certifications: [
       "AWS Cloud Essentials",
       "DevOps on AWS",
@@ -44,11 +36,32 @@ const Skills = () => {
     ],
   }
 
+  // Motion variants (same vibe as Experience)
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { duration: 0.9, delay: 0.6, staggerChildren: 0.08 },
+    },
+  }
+
+  const card = {
+    hidden: { y: 12, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { duration: 0.35 } },
+  }
+
+  const chip = {
+    hidden: { y: 6, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { duration: 0.25 } },
+    whileHover: { y: -2, scale: 1.02 },
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
       className="w-full px-[12%] py-10 scroll-mt-20"
       id="skills"
     >
@@ -56,70 +69,64 @@ const Skills = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
+        viewport={{ once: true }}
         className="text-center mb-2 text-lg font-ovo"
       >
         Tech Stack
       </motion.h4>
+
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
         className="text-center text-5xl font-ovo mb-10"
       >
         My Skills
       </motion.h2>
 
+      {/* grid matches Experience style */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.6 }}
-        className="grid gap-6 my-10 grid-cols-auto"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid gap-6 my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
       >
-        {serviceData.map((service, index) => (
+        {Object.entries(skills).map(([category, items]) => (
           <motion.div
+            key={category}
+            variants={card}
             whileHover={{ scale: 1.05 }}
-            key={index}
             className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:-translate-y-1 hover:bg-lighthover duration-500 
-            dark:hover:bg-darkhover dark:hover:shadow-white"
+              dark:hover:bg-darkhover dark:hover:shadow-white"
           >
-            <Image src={service.icon} alt="" className="w-10" />
-            <h3 className="my-4 text-gray-700 text-lg dark:text-white">
-              {service.title}
-            </h3>
-            <p className="text-sm text-gray-500 leading-5 dark:text-white/80">
-              {service.description}
-            </p>
-            <a
-              href={service.link}
-              className="flex items-center gap-2 mt-5 text-sm"
+            {/* optional icon slot; replace with your own if desired */}
+            <div className="flex items-center gap-3">
+              <Image src={assets.web_icon} alt="" className="w-8 h-8" />
+              <h3 className="my-2 text-gray-700 text-lg dark:text-white">
+                {category}
+              </h3>
+            </div>
+
+            <motion.ul
+              className="mt-4 flex flex-wrap gap-2"
+              variants={{ show: { transition: { staggerChildren: 0.03 } } }}
             >
-              Learn More{" "}
-              <Image src={assets.right_arrow} alt="arrow" className="w-4" />
-            </a>
+              {items.map((item) => (
+                <motion.li
+                  key={item}
+                  variants={chip}
+                  whileHover={chip.withHover}
+                  className="px-3 py-1 rounded-md text-sm bg-foreground/5 text-gray-600 dark:text-white/80 dark:bg-white/10 hover:bg-lighthover dark:hover:bg-darkhover transition"
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
           </motion.div>
         ))}
       </motion.div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {Object.entries(skills).map(([category, items]) => (
-          <div
-            key={category}
-            className="p-6 rounded-2xl border border-foreground/10 shadow-sm hover:bg-lighthover hover:-translate-y-1 hover:shadow-black transition"
-          >
-            <h3 className="text-xl font-semibold mb-4">{category}</h3>
-            <ul className="space-y-2 text-sm">
-              {items.map((item) => (
-                <li
-                  key={item}
-                  className="px-3 py-1 rounded-lg bg-foreground/5 hover:bg-lighthover transition"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
     </motion.div>
   )
 }

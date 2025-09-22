@@ -34,14 +34,16 @@ const About = ({ isDarkMode }) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div className="w-64 sm:w-80 rounded-3xl max-w-none">
+        <motion.div
+          className="w-64 sm:w-80 rounded-3xl max-w-none"
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.1, delay: 0.6 }}
+        >
           <Image
             src={assets.user_image}
             alt="user"
-            className="w-full rounded-3xl"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+            className="w-full mb-15 scale-105 rounded-3xl"
           />
         </motion.div>
         <motion.div
@@ -84,7 +86,7 @@ const About = ({ isDarkMode }) => {
               </motion.li>
             ))}
           </motion.ul>
-          <motion.h4
+          {/* <motion.h4
             className="my-6 text-gray-700 font-ovo dark:text-white/80"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +113,7 @@ const About = ({ isDarkMode }) => {
                 />
               </motion.li>
             ))}
-          </motion.ul>
+          </motion.ul> */}
         </motion.div>
       </motion.div>
     </motion.div>

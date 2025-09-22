@@ -34,9 +34,9 @@ function Hero({ isDarkMode }) {
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-ovo"
+        className="text-2xl sm:text-6xl lg:text-[66px] font-ovo"
       >
-        Full Stack Web Developer.{" "}
+        Full-Stack Developer
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -44,7 +44,8 @@ function Hero({ isDarkMode }) {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-ovo"
       >
-        I am a Full stack Developer with 4 years experience in React.
+        “Transforming complex problems into clean, user-focused solutions with
+        over 3 years of development experience.”
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -64,7 +65,7 @@ function Hero({ isDarkMode }) {
           />
         </motion.a>
         <motion.a
-          href="/sample-resume.pdf"
+          href="/Ayush Mistry - Resume SE.pdf"
           download={true}
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
           initial={{ y: 30, opacity: 0 }}

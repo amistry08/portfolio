@@ -8,6 +8,7 @@ import Project from "@/components/sections/project"
 import Contact from "@/components/sections/contact"
 import Footer from "@/components/layout/footer"
 import { useEffect, useState } from "react"
+import Experience from "@/components/sections/experience"
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -40,6 +41,7 @@ export default function Home() {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Hero isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
+      <Experience isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
       <Project isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />

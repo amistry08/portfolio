@@ -38,7 +38,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Ayush"
-            className="w-28 cursor-pointer mr-14"
+            className="w-28 cursor-pointer mr-14 scale-125"
           />
         </a>
         <ul
@@ -61,6 +61,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li>
             <a href="#experiences" className="font-ovo">
               Experiences
+            </a>
+          </li>
+          <li>
+            <a href="#skills" className="font-ovo">
+              Skills
             </a>
           </li>
           <li>
@@ -131,6 +136,12 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Experiences
             </a>
           </li>
+          <li>
+            <a href="#skills" className="font-ovo" onClick={closeMenu}>
+              Skills
+            </a>
+          </li>
+
           <li>
             <a href="#project" className="font-ovo" onClick={closeMenu}>
               Project
