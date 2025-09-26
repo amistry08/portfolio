@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { Outfit, Ovo } from "next/font/google"
 import "./globals.css"
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden bg-background text-foreground`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )
