@@ -48,3 +48,76 @@
 .grid-cols-auto {
     grid-template-columns: var(--grid-template-columns);
 }
+
+.skills ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: var(--background);
+}
+
+.skills ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    -webkit-border-radius: 1ex;
+}
+
+.skills ::-webkit-scrollbar-corner {
+    background: var(--background);
+}
+
+.skills .parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-inline: clamp(16px, 6vw, 96px);
+}
+
+/* row spacing */
+.skills .parallax + .parallax {
+    margin-top: clamp(12px, 2.5vh, 28px);
+}
+
+.skills .parallax {
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent 0 5%,
+        #000 15% 85%,
+        transparent 95% 100%
+    );
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0 5%,
+        #000 15% 85%,
+        transparent 95% 100%
+    );
+    padding-inline: 0; /* mask replaces padding */
+}
+
+.skills .parallax .scroller {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 64px;
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.skills .parallax span {
+    display: block;
+    margin-right: 30px;
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    color: var(--foreground); /* picks up your theme color */
+}
+.skill-icon svg {
+    width: auto;
+    height: auto;
+}

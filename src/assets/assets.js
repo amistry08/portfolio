@@ -221,3 +221,53 @@ export const toolsData = [
     assets.figma,
     assets.git,
 ]
+
+/* Row 1 (16) — Languages + core Frontend */
+export const ROW1 = [
+    "devicon:javascript",
+    "devicon:typescript",
+    "devicon:python-wordmark",
+    "devicon:java-wordmark",
+    "devicon:csharp",
+    "devicon:cplusplus",
+    "devicon:html5",
+    "devicon:css3",
+    "devicon:react-wordmark",
+    "devicon:nextjs",
+    "devicon:angular",
+    "devicon:flutter",
+    "devicon:tailwindcss",
+    "devicon:reactnative-wordmark", // React Native (proxy)
+]
+
+/* Row 2 (16) — Backend + Databases + CI/CD (generic) */
+export const ROW2 = [
+    "devicon:nodejs",
+    "skill-icons:expressjs-dark",
+    "devicon:dot-net",
+    "skill-icons:django", //django
+    "material-icon-theme:graphql", // GraphQL (generic)
+    "devicon:mysql-wordmark",
+    "devicon:postgresql-wordmark",
+    "devicon:mongodb-wordmark",
+    "devicon:firebase",
+    "devicon:redis-wordmark",
+    "mdi:api", // RESTful APIs (generic)
+    "devicon:bootstrap",
+    "devicon:postman",
+]
+
+/* Row 3 (16) — Cloud/DevOps + Tools + AI/Methodologies */
+export const ROW3 = [
+    "devicon:amazonwebservices",
+    "devicon:azure",
+    "devicon:docker-wordmark",
+    "devicon:kubernetes",
+    "devicon:githubactions",
+    "devicon:jenkins",
+    "devicon:jira",
+    "skill-icons:git",
+    "mdi:github",
+    "carbon:microservices-1",
+    "devicon:bash",
+]

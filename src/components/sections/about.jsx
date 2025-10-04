@@ -29,13 +29,13 @@ const About = ({ isDarkMode }) => {
                 About Me
             </motion.h2>
             <motion.div
-                className="flex w-full flex-col lg:flex-row items-start gap-20 my-20"
+                className="flex w-full flex-col lg:flex-row items-start gap-15 lg:gap-25 mt-10 "
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
                 <motion.div
-                    className="w-64 sm:w-80 rounded-3xl max-w-none"
+                    className="w-full max-w-[20rem] rounded-3xl mx-auto lg:mx-0"
                     initial={{ x: -50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.1, delay: 0.6 }}
@@ -52,7 +52,7 @@ const About = ({ isDarkMode }) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                    <p className="mb-10 max-w-2xl text-balance font-ovo">
+                    <p className="mb-10 max-w-2xl text-justify font-ovo">
                         Full-stack developer with hands-on experience building
                         responsive web and mobile applications using React,
                         Node.js, and modern cloud tools. Skilled in creating
