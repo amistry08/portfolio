@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👨‍💻 Personal Portfolio — Ayush
 
-## Getting Started
+A responsive personal portfolio website built with **Next.js** to showcase my skills, projects, and professional experience.
 
-First, run the development server:
+🔗 Live Demo: https://portfolio-ayukiras-projects.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This portfolio is designed to highlight my work as a developer and demonstrate:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- My technical skills
+- Completed projects with live links and code
+- Professional experience and education
+- Contact & social profiles
 
-## Learn More
+This project serves both as my online resume and a showcase of front-end development skills built with modern tools.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Responsive layout for desktop and mobile
+- Clean project sections with visuals and descriptions
+- Skills and tools section
+- Experience timeline
+- Contact form or links
+- Smooth navigation and UI transitions
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js** (React framework)
+- **React**
+- **JavaScript**
+- **CSS / Tailwind / custom styles**
+- **Vercel** deployment
+
+---
+
+## ✨ Why This Portfolio
+
+This site highlights both:
+- Front-end development skills using modern React/Next.js
+- My ability to structure content with clarity and design focus
+
+It’s built to make it easy for recruiters and collaborators to understand my capabilities at a glance.
+
+---
+
+## 📌 Deployment
+
+This website is deployed on **Vercel** and updates automatically with each push to the main branch.
+
+---
+
+## 📜 License
+
+MIT
